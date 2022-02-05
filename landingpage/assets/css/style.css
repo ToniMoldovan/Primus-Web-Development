@@ -1,15 +1,11 @@
-/**
-* Template Name: Siimple - v4.6.0
-* Template URL: https://bootstrapmade.com/free-bootstrap-landing-page/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #444444;
 }
 
@@ -24,7 +20,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-primary {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -36,29 +32,84 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   z-index: 10;
   position: relative;
 }
-#header .logo h1 {
-  font-size: 36px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 300;
-  letter-spacing: 3px;
-}
-#header .logo h1 a, #header .logo h1 a:hover {
-  color: #fff;
-  text-decoration: none;
-}
+
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 20%;
 }
-@media (max-width: 768px) {
-  #header .logo h1 {
-    font-size: 28px;
-    padding: 8px 0;
+
+ /*-----------------------------------------------
+ # INCEPUT MEDIA QUERIES
+ -------------------------------------------------*/
+ @media (max-width: 991.98px) { /* Pentru TABLETE */
+  #header .logo {
+    text-align: center;
+  }
+
+  #header .logo img {
+    margin: 0 !important;
+    width: 50%;
+  }
+
+  #hero {
+    background-position-x: 90% !important;
+  }
+
+  .countdown_timer ul li {
+    font-size: 1rem !important;
   }
 }
+
+@media (max-width: 767.98px) { /* Pentru Tablete */
+  #header .logo {
+    text-align: center;
+  }
+
+  #header .logo img {
+    margin: 0 !important;
+    width: 50%;
+  }
+
+  #hero {
+    background-position-x: 90% !important;
+  }
+
+  .countdown_timer ul li {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 575.98px) { /* Pentru TELEFOANE */
+  #header .logo {
+    text-align: center;
+  }
+
+  #header .logo img {
+    margin: 0 !important;
+    width: 65% !important;
+  }
+
+  #hero {
+    background-position-x: 90% !important;
+  }
+
+  #hero .sageata_rand {
+    padding-top: 200px;
+  }
+
+  .countdown_timer ul li span,
+  .countdown_timer ul li{
+    font-size: 22px !important;
+    padding: 8px !important;
+  }
+}
+
+ /*-----------------------------------------------
+ # SFARSIT MEDIA QUERIES
+ -------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -72,7 +123,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   right: -260px;
   width: 260px;
   padding-top: 18px;
-  background: rgba(34, 34, 34, 0.8);
+  background: rgba(29, 29, 29, 0.8);
   transition: 0.4s;
 }
 .nav-menu * {
@@ -80,18 +131,26 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   padding: 0;
   list-style: none;
 }
+
+.nav-menu ul li img {
+  width: 60%;
+}
 .nav-menu a, .nav-menu a:focus {
   display: block;
   position: relative;
-  color: #ffd2b7;
+  color: #ffffff;
   padding: 10px 20px;
   font-weight: 500;
   transition: 0.3s;
 }
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #ffa26a;
+.nav-menu a:hover, 
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #ff914d;
   text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.787);
 }
+
 .nav-menu .drop-down > a:after {
   content: "\ea27";
   font-family: "boxicons";
@@ -342,11 +401,36 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+/* Countdown timer */
+
+.countdown_timer ul li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+  color: rgb(231, 231, 231);
+}
+.countdown_timer ul li span {
+  display: block;
+  font-size: 3rem;
+}
+.countdown_timer #cntdown_h2 {
+  font-weight: 300 !important;
+  font-size: larger;
+}
+
+.countdown_timer {
+  padding-top: 20px;
+}
+
 #hero {
   width: 100%;
-  height: 80vh;
-  background: url("../img/hero-bg.jpg") center center;
+  height: 100vh;
+  background: url("../img/bg_without_logo.jpg") rgba(29, 29, 31, 0.65) no-repeat fixed;
   background-size: cover;
+  background-blend-mode: multiply;
   position: relative;
   margin-top: -80px;
   z-index: 9;
@@ -364,19 +448,50 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   text-align: center;
   padding: 0 15px;
 }
+
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 100px 0 10px 0;
   font-size: 48px;
   font-weight: 400;
   line-height: 56px;
   line-height: 56px;
-  color: #222;
+  color: rgb(228, 228, 228);
+  font-weight: 600;
 }
+
 #hero h2 {
-  color: #333;
-  margin-bottom: 30px;
+  color: rgb(228, 228, 228);
+  margin-bottom: 40px;
   font-size: 24px;
+  font-weight: 400;
 }
+/* Float effect by Toni */
+#hero .link {
+  text-decoration: none !important;
+}
+
+.float-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.float-on-hover:hover, .float-on-hover:focus, .float-on-hover:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+#hero .sageata_rand {
+  padding-top: 50px;
+}
+
 #hero .php-email-form .error-message {
   display: none;
   color: #fff;

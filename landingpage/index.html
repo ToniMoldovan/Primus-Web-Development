@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 
   <title>Bun venit!</title>
   <meta content="" name="description">
@@ -32,35 +32,19 @@
     <div class="container-fluid">
 
       <div class="logo">
-        <h1><a href="index.html">Siimple</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="index.html"><img src="assets/img/logo.png" alt="logo-img"></a></h1>
       </div>
 
       <button type="button" class="nav-toggle"><i class="bx bx-menu"></i></button>
       <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="#header" class="scrollto">Home</a></li>
-          <li><a href="#about" class="scrollto">About Us</a></li>
-          <li><a href="#why-us" class="scrollto">Why Us</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact" class="scrollto">Contact Us</a></li>
+          <!-- Uncomment for image in nav-menu -->
+          <!-- <li><img src="assets/img/logo.png" alt="logo"></li> -->
+          <li class="active"><a href="#header" class="scrollto">Acasă</a></li>
+          <li><a href="#about" class="scrollto">Despre</a></li>
+          <li><a href="#why-us" class="scrollto">De ce Primus?</a></li>
+          <li><a href="#faq" class="scrollto">Întrebări frecvente</a></li>
+          <li><a href="#contact" class="scrollto">Contact</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -70,10 +54,48 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <h1>Welcome to Siimple</h1>
-      <h2>Please, fill out the for below to be notified for the latest updates!</h2>
+      <h1>Bine ai venit, războinicule!</h1>
+      <h2>Te rugăm să te alături comunității noastre pentru a fii la curent cu toate noutățile!</h2>
 
-      <form action="forms/notify.php" method="post" role="form" class="php-email-form">
+      <div class="row">
+            <!-- Facebook -->
+          <div class="col">
+            <a class="link float-on-hover" href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/></a>
+          </div>
+
+          <!-- Youtube -->
+          <div class="col">
+            <a class="link float-on-hover" href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/flat-round/48/000000/youtube-play.png"/></a>
+          </div>
+
+          <!-- Discord -->
+          <div class="col">
+            <a class="link float-on-hover" href="#" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/color/48/000000/discord-new-logo.png"/></a>
+          </div>
+      </div>
+
+      <!-- Countdown timer -->
+      <div class="row">
+        <div class="countdown_timer" id="count">
+          <ul>
+            <li><span id="day"></span>D</li>
+            <li><span id="hour"></span>H</li>
+            <li><span id="minute"></span>M</li>
+            <li><span id="second"></span>S</li>
+          </ul>
+          <h2 id="cntdown_h2">.. rămase până la deschidere!</h2>
+        </div>
+      </div>
+
+      <!-- Sageata in jos -->
+      <div class="row sageata_rand">
+        <div class="col">
+          <a class="link float-on-hover" href="#about"><img src="https://img.icons8.com/external-those-icons-fill-those-icons/48/ffffff/external-down-arrows-those-icons-fill-those-icons.png"/></a>
+        </div>
+      </div>
+
+      <!-- Uncomment for email subscription form  -->
+      <!-- <form action="forms/notify.php" method="post" role="form" class="php-email-form">
         <div class="row no-gutters">
           <div class="col-md-6 form-group pr-md-1">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -89,7 +111,8 @@
           <div class="sent-message">Your notification request was sent. Thank you!</div>
         </div>
         <div class="text-center"><button type="submit">Notify me!</button></div>
-      </form>
+      </form> -->
+
     </div>
   </section><!-- #hero -->
 
@@ -172,7 +195,7 @@
     </section><!-- End Why Us Section -->
 
     <!-- ======= Frequenty Asked Questions Section ======= -->
-    <section class="faq">
+    <section id="faq" class="faq">
       <div class="container">
 
         <div class="section-title">
@@ -329,6 +352,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/countdown.js"></script>
 
 </body>
 
