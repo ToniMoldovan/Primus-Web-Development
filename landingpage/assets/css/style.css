@@ -185,14 +185,14 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   top: 15px;
   z-index: 9998;
   border: 0;
-  background: rgba(34, 34, 34, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   transition: all 0.4s;
   outline: none !important;
   line-height: 1;
   cursor: pointer;
   text-align: right;
   padding: 10px 12px;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 .nav-toggle i {
   color: #fff;
@@ -423,6 +423,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 
 .countdown_timer {
   padding-top: 20px;
+  text-align: center !important;
 }
 
 #hero {
