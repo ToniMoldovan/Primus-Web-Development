@@ -11,11 +11,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #fd680e;
+  color: #E6971A;
 }
 
 a:hover {
-  color: #ff8f4c;
+  color: #E6971A;
   text-decoration: none;
 }
 
@@ -599,7 +599,7 @@ section {
 }
 
 .section-bg {
-  background-color: #fff7f2;
+  background-color: #243804d7;
 }
 
 .section-title {
@@ -608,10 +608,11 @@ section {
 }
 .section-title h2 {
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 15px;
   position: relative;
+  color: rgb(238, 238, 238);
 }
 .section-title h2::after {
   content: "";
@@ -619,10 +620,11 @@ section {
   display: block;
   width: 80px;
   height: 1px;
-  background: #fd680e;
+  background: rgb(238, 238, 238);
   bottom: 0;
   left: calc(50% - 40px);
 }
+
 .section-title p {
   margin-bottom: 0;
   font-style: italic;
@@ -713,7 +715,9 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding-bottom: 60px;
+  background-color: #2e4903bb;
 }
+
 .faq .faq-list {
   padding: 0;
   list-style: none;
@@ -723,10 +727,22 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
+
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #fd680e;
+  color: #E6971A;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.faq .faq-list a:hover {
+  display: block;
+  position: relative;
+  font-family: #E6971A;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -742,15 +758,18 @@ section {
 .faq .faq-list p {
   margin-bottom: 0;
   padding: 10px 0 0 0;
+  color: #e9e9e9;
+  font-size: 1.1em;
 }
 .faq .faq-list .icon-show {
   display: none;
 }
 .faq .faq-list a.collapsed {
-  color: #343a40;
+  color: #e9e9e9;
+  font-weight: 500;
 }
 .faq .faq-list a.collapsed:hover {
-  color: #fd680e;
+  color: #E6971A;
 }
 .faq .faq-list a.collapsed .icon-show {
   display: inline-block;
