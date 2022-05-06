@@ -1,7 +1,7 @@
 const count = document.getElementById('count');
 
 const config = {
-  birthdate: 'Mar 18, 2022',
+  birthdate: 'Jul 18, 2022',
   name: "Momo 🤍"
 };
 
