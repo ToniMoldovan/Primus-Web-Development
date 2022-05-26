@@ -696,10 +696,11 @@ section {
   margin-bottom: 0px !important;
 }
 
+
 /* Zoom on image hover effect start */
 
 .img-hover-zoom img {
-  transition: transform .5s ease;
+  transition: transform .4s ease-in-out;
 }
 
 .img-hover-zoom:hover img {

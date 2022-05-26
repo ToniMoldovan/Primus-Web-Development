@@ -28,6 +28,22 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- Popover on hover effect start -->
+  <!-- Initialize Bootstrap functionality -->
+  <script>
+    // Initialize tooltip component
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+    
+    // Initialize popover component
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  </script>
+
+  <!-- Popover on hover effect end -->
+
   <script type="text/javascript">
     $(document).ready(function() {
       $("#myModal").modal({
@@ -187,7 +203,7 @@
               So we are happy to invite you to be a part of it because we know that you will bring a plus to the community!
             </p>
             <div class="discord-invite-button mx-auto">
-              <a href=""><img src="assets/img/join_discord_button.png" alt="join_discord_button"></a>
+              <a href="#" data-toggle="tooltip" data-placement="right" title="You are one click away!"><img src="assets/img/join_discord_button.png" alt="join_discord_button"></a>
             </div>
           </div>
         </div>
