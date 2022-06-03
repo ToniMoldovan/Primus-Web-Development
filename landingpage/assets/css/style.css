@@ -131,6 +131,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   .faq .image-holder img{
     float: right; 
   }
+
+  .faq .subscribe-form input{
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+  
 }
 
  /*-----------------------------------------------
@@ -726,7 +732,7 @@ section {
 --------------------------------------------------------------*/
 .why-us {
   padding-bottom: 30px;
-  background: url("../img/stars_bg.jpg") rgba(29, 29, 31, 0.65) no-repeat;
+  background: url("../img/about-bg.jpg") rgba(80, 80, 84, 0.65) no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
   position: relative; 
@@ -806,7 +812,16 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding-bottom: 60px;
-  background-color: #ffffff;
+  background: url("../img/contact-bg.jpg") rgba(80, 80, 84, 0.65) no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  position: relative; 
+  z-index: 9;
+}
+
+.faq .join-discord-ideas h2,
+.faq .join-discord-ideas h3{
+  color: white;
 }
 
 .faq .faq-list {
@@ -878,13 +893,24 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #e9e9e9;
+  background-color: #ffffff;
   border-radius: 25px;
 }
 
 .faq .subscribe-form {
   display: table-cell; 
   width: 100%;
+}
+
+.faq .subscribe-form h3{
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 700;
+}
+
+.faq .subscribe-form p{
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 700;
+  font-size: larger;
 }
 
 .faq .subscribe-form input{
@@ -907,14 +933,14 @@ section {
   width: fit-content; 
   margin-left: 10px;
   border-radius: 25px;  
-  background-color: black;
+  background-color: rgb(38, 38, 38);
   color: white;
   transition: 0.2s ease-out; 
 }
 
 .faq .subscribe-form #subscribe-btn:hover{
   background-color: white;
-  color: black;
+  color: rgb(44, 44, 44);
   transition: 0.1s ease-in;
 }
 
@@ -1053,14 +1079,24 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #2f1708;
+  background: #181818;
   padding: 30px 0;
   color: #fff;
   font-size: 14px;
 }
+
+#footer .footer-logo-container img{
+  width: 70%; 
+}
+
+#footer .footer-logo-container{
+  width: 100%;
+}
+
 #footer .copyright {
   text-align: center;
 }
+
 #footer .credits {
   padding-top: 10px;
   text-align: center;
