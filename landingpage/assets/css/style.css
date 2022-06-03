@@ -907,6 +907,15 @@ section {
   font-weight: 700;
 }
 
+.faq .subscribe-form .thank-you-image{
+  width: 100%; 
+}
+
+.faq .subscribe-form .thank-you-image img{
+  width: 80%;
+  border-radius: 25px;
+}
+
 .faq .subscribe-form p{
   font-family: 'Cormorant Garamond', serif !important;
   font-weight: 700;
@@ -1102,4 +1111,16 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+#footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#footer h4{
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-size: 28px;
 }

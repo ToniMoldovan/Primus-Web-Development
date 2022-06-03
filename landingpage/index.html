@@ -9,7 +9,7 @@
   <meta content="Official page of Primus Metin2. An old school gameplay but with modern systems that will give players a wonderful experience." name="description">
   <meta content="Metin2, Just4Metin, Metin2Dev, Turkmmo, MMORPG, Metin2 Old school, Metin2 Romania, Metin2 United, Metin2 Alaska, Metin2 Gameplay, Synx, Metin2 RO, metin2" name="keywords">
   <meta content="Primus Metin2" name="author">
-  
+
   <!-- Favicons -->
   <link href="assets/img/icon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -29,7 +29,9 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -59,6 +61,8 @@
       $("#myModal").modal('show');
   });
   </script>
+
+  
 
 </head>
 
@@ -313,11 +317,14 @@
             <div class="subscribe-form">
               <h3><i class="fa fa-envelope" aria-hidden="true"></i> Subscribe to our Newsletter</h3><hr>
               <p>Until the official opening of the game, we will keep you updated with news and other exclusive details via email.</p>
-              <form method="POST" action="/assets/php/subscribe-mailchimp.php">
-                <div class="form-group pt-4 ">
-                  <input type="email" name="email" placeholder="Enter your email.." required="required">
+              <form id="subscribe-form">
+                <div class="form-group pt-4" id="form-inputs">
+                  <input type="email" name="email" id="email" placeholder="Enter your email.." required="required">
                   <button class="btn" name="submit" id="subscribe-btn">Subscribe</button> 
-                  <small id="emailHelp" class="form-text text-info"><i class="fa fa-check" aria-hidden="true"></i> We promise not to spam your inbox. </small> 
+                  <small id="emailHelp" class="form-text text-success"><i class="fa fa-check" aria-hidden="true"></i> We promise not to spam your inbox. </small> 
+                </div>
+                <div class="thank-you-image" id="thank-you-subscription">
+                  <img src="assets/img/subscribe_success.png" alt="subsribe_success">
                 </div>
               </form>
 
@@ -361,7 +368,7 @@
           <div class="footer-logo-container"> 
             <img src="./assets/img/logo_try_small_2.png" alt="footer-logo">
           </div>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores necessitatibus veritatis, natus tempore possimus laudantium odit delectus odio magnam et accusamus, suscipit illum minus dolor quasi, minima iusto enim deserunt?</p>
+          <p>Primus Metin2 aims to offer players exciting gameplay and a community of civilized people with common interests. Join us today and we'll give you a cheerful place to play your favorite childhood game.</p>
 
         </div>
 
@@ -408,6 +415,50 @@
   <script src="assets/js/main.js"></script>
 
   <script src="assets/js/countdown.js"></script>
+
+  <!-- Script to manage subscription form
+       Using AJAX -->
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //Hide the thank you for subscription div
+      $('#thank-you-subscription').hide();
+
+      var requests;
+
+      $("#subscribe-form").submit(function(event) {
+        event.preventDefault();
+
+        if (requests){
+          requests.abort();
+        }
+
+        var $form = $(this);
+
+        var $inputs = $form.find("input, select, button, textarea");
+
+        var serializedData = $form.serialize();
+
+        $inputs.prop("disabled", true);
+
+        request = $.ajax({
+          url: "/assets/php/subscribe-mailchimp.php",
+          type: "post",
+          data: serializedData
+        });
+
+        request.done(function (response, textStatus, jqXHR){
+          // Log a message to the console
+          console.log("Hooray, it worked!");
+          
+          $('#form-inputs').fadeOut('slow'); //Hides the form
+          $('#thank-you-subscription').fadeIn('slow'); // Makes the thank you div appear
+        });
+
+      });
+
+    });
+  </script>
 
   
 

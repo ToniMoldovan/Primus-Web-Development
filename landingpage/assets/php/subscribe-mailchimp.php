@@ -1,20 +1,10 @@
 <?php
-
-    #Clears white spaces
-    function cleanUserInput($data){
-        $cleanData = htmlspecialchars($data);
-        $cleanData = stripslashes($data);
-        $cleanData = trim($data);
-
-        return $cleanData;
-    }
-
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['email'])) {
         
-        $email = cleanUserInput($_POST['email']);
+        $email = $_POST['email'];
 
         $list_id = 'd0ca49fb1c';
-        $api_key = '3ee5a13751840d31cd6cd8fe9df54c65-us12';
+        $api_key = '72efe3505862ddaa9d601b0efb940605-us12';
         
         $data_center = substr($api_key,strpos($api_key,'-')+1);
         
@@ -46,6 +36,4 @@
         }
 
     }
-
-
 ?>
