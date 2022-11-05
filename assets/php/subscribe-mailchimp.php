@@ -4,7 +4,7 @@
         $email = $_POST['email'];
 
         $list_id = 'd0ca49fb1c';
-        $api_key = '72efe3505862ddaa9d601b0efb940605-us12';
+        $api_key = '3f756c7965f33212e03001ffe687187c-us12';
         
         $data_center = substr($api_key,strpos($api_key,'-')+1);
         
